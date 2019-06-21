@@ -29,7 +29,7 @@ class Record(DB.Model):
 @APP.route('/')
 def root():
     records=list(DB.session.query(Record).filter(Record.value >= 10))
-    return render_template('dashboard.html', title='Los Angeles', records=records)
+ 
 
 
 @APP.route('/refresh')
