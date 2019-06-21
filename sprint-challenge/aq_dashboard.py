@@ -34,9 +34,6 @@ def root():
 
 @APP.route('/refresh')
 def refresh():
-    '''
-    Pull fresh data from Open AQ and replace existing data.
-    '''
     DB.drop_all()
     DB.create_all()
     data = get_date_and_measure('Los Angeles', 'pm25')
